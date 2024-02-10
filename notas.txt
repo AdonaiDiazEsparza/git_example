@@ -96,3 +96,9 @@ git pull origin rama                            #   Con este comando actualizamo
 
 git push origin main                            #   Con este comando actualizamos el proyecto web donde agregamos archivos y modificaciones de nuestro
                                                 #   proyecto local es decir (Local -> web)
+
+
+#######################################################################################################################
+#                   Usando el release
+#######################################################################################################################
+
