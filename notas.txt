@@ -62,8 +62,8 @@ git merge Nombre-de-ramificacion            #   crear como ultimo commit el comm
 #                                   REMOTO GITHUB
 #######################################################################################################
 
-git remot add NOMBRE "url"                    #   Este es para crear un repositorio en linea, segun la plataforma
-                                            #   el NOMBRE normalmente como predeterminado ponen como "origin"
+git remot add NOMBRE "url"                      #   Este es para crear un repositorio en linea, segun la plataforma
+                                                #   el NOMBRE normalmente como predeterminado ponen como "origin"
 pasos para subir el repositorio...          
 lo primero que hice fue crear un proyecto, en este caso fue el archivo "main.py"
 el archivo .gitignore funciona para que git ignore archivos que no quieras agregar a un commit o guardar en versiones
@@ -79,3 +79,15 @@ por lo que al iniciar al iniciar el git branch (estoy en windows), doy los coman
 7   git log --oneline               para observar de nuevo los commits
 8   git remote add origin "url"     para agregar la ruta para subir el repositorio a la nube
 9   git push -u origin main         para subir nuestro repositorio
+
+Te abrira una cuenta para que te de permiso de entrar a la URL indicado, es decir si entraras a n repositorio externo que no sea tuyo
+vas a tener que esperar a que te den la autorizacion de subir el repositorio
+
+#######################################################################################################################
+#                   Actualizar repositorio remoto
+#######################################################################################################################
+
+git clone url                                   #   Con este comando vamos a copiar y bajar desde una pagina
+                                                #   un proyecto de GITHUB
+
+git pull origin rama                            #   Con este comando actualizamos el proyecto de la web si se agregaron archivos nuevos

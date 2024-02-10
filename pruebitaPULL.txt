@@ -1,0 +1,6 @@
+Prueba con PULL
+
+
+Esta prueba se descargo con PULL
+
+la actualizacion que hicimos fue crearlo y pasarlo de archivo a un archivo de tipo txt
