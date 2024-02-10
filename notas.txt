@@ -1,0 +1,81 @@
+
+##########################################  GUARDADO Y RESTAURACION DE ARCHIVOS Y COMMIT #################################################################
+
+git status                                  #   Funciona para ver el estatus
+                                            #   de la carpeta, si se han modificado
+                                            #   archivos de codigo
+
+git status -s                               #   muestra lo mismo que le comando anterior pero de manera simplificada
+
+git add                                     #   agrega un archivo que ha sido modificado
+
+git add .                                   #   Funciona para evitar estar agregando archivo por archivo, es decir agrega todos los archivos
+
+git commit                                  #   Funciona para guardar la version creada del codigo
+
+git commit -m "Comentario del Commit"       #   Guarda un commit sin entrar al editor de texto
+
+git checkout nombre-archivo                 #   restaura un archivo modificado, esto despues de que en el git status
+
+git restore nombre-archivo                  #   se muestre la modificacion, lo que se logra con esto es devolver el 
+                                            #   archivo original al ultimo commit
+
+git diff nombre-archivo                     #   muestra las diferencias o modificaciones que se hicieron en los codigos
+
+git reset                                   #   este comando funciona para borrar la version hasta otro nivel, es decir, podemos regresar de 
+                                            #   commit y borrar las siguientes, para este comando se utiliza niveles de borrado
+
+git reset --soft head~No-de-versiones       #   soft funciona solo para regresar y no borrar
+
+git reset --mixed head                      #   borra del area de preparacion y del repositorio pero no del area de trabajo 
+
+git reset --hard head <direccion>           #   borra todo el commit hasta la direccion apuntada
+
+##########################################  PARA OBSERVAR COMMIT ##########################################################################
+git log                                     #   Con este mando funciona para observar todos las versiones guardadas
+                                            #   desde un comienzo
+
+git log --oneline                           #   Evita ver toda la informacion de las versionas guardadas
+
+###########################################  RAMIFICACION #################################################################################
+
+git branch nombre-ramificacion              #   nos funciona para crear un brach o ramificacion 
+                                            #   alternativo de nuestro proyecto es decir, se creara
+                                            #   una copia de los archivos dentro del proyecto, o de la 
+                                            #   carpeta con la que este trabajando
+
+
+git checkout nombre-del-branch              #   para entrar a otro branch o ramificacion se usa este comando
+
+git branch -d nombre-del-branch-a-borrar    #   para eliminar la rama 
+
+git merge Nombre-de-ramificacion            #   crear como ultimo commit el commit reciente de otra ramificacion, es decir, 
+                                            #   unir el ultimo commit de una ramificacion en la ramificacion en al que te encuentre
+
+
+#######################################################################################################
+####                NOTA: si te sale la palabra (END) en el comando pulsa la tecla q
+#######################################################################################################
+
+
+#######################################################################################################
+#                                   REMOTO GITHUB
+#######################################################################################################
+
+git remot add NOMBRE "url"                    #   Este es para crear un repositorio en linea, segun la plataforma
+                                            #   el NOMBRE normalmente como predeterminado ponen como "origin"
+pasos para subir el repositorio...          
+lo primero que hice fue crear un proyecto, en este caso fue el archivo "main.py"
+el archivo .gitignore funciona para que git ignore archivos que no quieras agregar a un commit o guardar en versiones
+despues en este proyecto tambien se encuentra este archivo de texto (notas.txt)
+
+por lo que al iniciar al iniciar el git branch (estoy en windows), doy los comandos:
+1   git init                        para inicializar git
+2   git status                      para observar el estado del proyecto
+3   git add .                       para agregar los archivos al repositorio
+4   git commit -m NAME              para crear el commit
+5   git log --oneline               para observar el commit creado
+6   git branch -M main              para crear una ramificacion
+7   git log --oneline               para observar de nuevo los commits
+8   git remote add origin "url"     para agregar la ruta para subir el repositorio a la nube
+9   git push -u origin main         para subir nuestro repositorio
