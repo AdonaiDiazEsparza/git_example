@@ -44,6 +44,7 @@ git branch nombre-ramificacion              #   nos funciona para crear un brach
                                             #   una copia de los archivos dentro del proyecto, o de la 
                                             #   carpeta con la que este trabajando
 
+git branch -m nombre-ramificacion           #   Funciona para cambiar el nombre de la ramificacion
 
 git checkout nombre-del-branch              #   para entrar a otro branch o ramificacion se usa este comando
 
@@ -90,4 +91,8 @@ vas a tener que esperar a que te den la autorizacion de subir el repositorio
 git clone url                                   #   Con este comando vamos a copiar y bajar desde una pagina
                                                 #   un proyecto de GITHUB
 
-git pull origin rama                            #   Con este comando actualizamos el proyecto de la web si se agregaron archivos nuevos
+git pull origin rama                            #   Con este comando actualizamos el proyecto de la web si se agregaron archivos nuevos hacia nuestro
+                                                #   proyecto local es decir (web -> Local)
+
+git push origin main                            #   Con este comando actualizamos el proyecto web donde agregamos archivos y modificaciones de nuestro
+                                                #   proyecto local es decir (Local -> web)
