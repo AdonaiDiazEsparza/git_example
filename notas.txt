@@ -37,6 +37,8 @@ git log                                     #   Con este mando funciona para obs
 
 git log --oneline                           #   Evita ver toda la informacion de las versionas guardadas
 
+git log --oneline --graph                   #   muestra las ramificaciones de manera "grafica"
+
 ###########################################  RAMIFICACION #################################################################################
 
 git branch nombre-ramificacion              #   nos funciona para crear un brach o ramificacion 
@@ -53,7 +55,12 @@ git branch -d nombre-del-branch-a-borrar    #   para eliminar la rama
 git merge Nombre-de-ramificacion            #   crear como ultimo commit el commit reciente de otra ramificacion, es decir, 
                                             #   unir el ultimo commit de una ramificacion en la ramificacion en al que te encuentre
 
+git branch -r                               #   Muestra todas las ramificaciones, incluso las ocultas
 
+git checkout fetch_HEAD                     #   Funciona para cambiar a la rama oculta descargadas por el comando git fetch
+
+git switch -c <RamaCreadaPorUnFetch>        #   Despues de entrar a una rama oculta creada por git fetch, este comando funciona para crear una rama 
+                                            #   visible y con la cual puedas trabajar
 #######################################################################################################
 ####                NOTA: si te sale la palabra (END) en el comando pulsa la tecla q
 #######################################################################################################
@@ -63,7 +70,7 @@ git merge Nombre-de-ramificacion            #   crear como ultimo commit el comm
 #                                   REMOTO GITHUB
 #######################################################################################################
 
-git remot add NOMBRE "url"                      #   Este es para crear un repositorio en linea, segun la plataforma
+git remote add NOMBRE "url"                     #   Este es para crear un repositorio en linea, segun la plataforma
                                                 #   el NOMBRE normalmente como predeterminado ponen como "origin"
 pasos para subir el repositorio...          
 lo primero que hice fue crear un proyecto, en este caso fue el archivo "main.py"
@@ -88,17 +95,36 @@ vas a tener que esperar a que te den la autorizacion de subir el repositorio
 #                   Actualizar repositorio remoto
 #######################################################################################################################
 
-git clone url                                   #   Con este comando vamos a copiar y bajar desde una pagina
+git remote -v                                   #   Funciona para ver los repositorios que tienes 
+
+git clone <url>                                 #   Con este comando vamos a copiar y bajar desde una pagina
                                                 #   un proyecto de GITHUB
 
-git pull origin rama                            #   Con este comando actualizamos el proyecto de la web si se agregaron archivos nuevos hacia nuestro
+git pull <origin> <rama>                        #   Con este comando actualizamos el proyecto de la web si se agregaron archivos nuevos hacia nuestro
                                                 #   proyecto local es decir (web -> Local)
 
-git push origin main                            #   Con este comando actualizamos el proyecto web donde agregamos archivos y modificaciones de nuestro
+git push <origin> <rama>                        #   Con este comando actualizamos el proyecto web donde agregamos archivos y modificaciones de nuestro
                                                 #   proyecto local es decir (Local -> web)
 
+git fetch                                       #   Funciona para descargar actualizaciones al proyecto local en una rama diferente a la rama principal
+                                                #   esta rama se ecnuentra oculta, se necesita usar el comando git branch -r 
+
+git push <origin>: <Rama>                       #   Para subir una rama alterna a la rama principal en github, usamos este comando donde nos crea una rama dentro
+                                                #   del repositorio remoto
 
 #######################################################################################################################
 #                   Usando el release
 #######################################################################################################################
 
+
+
+########################################################################################################################
+#                               Dudas
+########################################################################################################################
+
+*¿Se puede borrar commits anteriores sin eliminar el commit más actual?
+*¿Si se desea unir una ramificacion alterna a la ramificacion principal? 
+    Por ejemplo, si tu en la rama principal modificaste archivos que no modificaste en otra ramificacion alterna y realizas el commit,
+    y en la ramificacion alterna, modificaste otros archivos que no cambiaste en nada en la rama principal, al momento de que yo desee
+    unir la ramificacion alterna a la ramificacion principal,¿los archivos que modificaste en el principal, pero no en el alterno, regresan a la version original
+    debido a la union?
