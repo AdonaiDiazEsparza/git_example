@@ -109,7 +109,7 @@ git push <origin> <rama>                        #   Con este comando actualizamo
 git fetch                                       #   Funciona para descargar actualizaciones al proyecto local en una rama diferente a la rama principal
                                                 #   esta rama se ecnuentra oculta, se necesita usar el comando git branch -r 
 
-git push <origin>: <Rama>                       #   Para subir una rama alterna a la rama principal en github, usamos este comando donde nos crea una rama dentro
+git push <origin> HEAD: <Rama>                  #   Para subir una rama alterna a la rama principal en github, usamos este comando donde nos crea una rama dentro
                                                 #   del repositorio remoto
 
 #######################################################################################################################
