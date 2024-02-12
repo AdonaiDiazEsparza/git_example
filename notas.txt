@@ -108,7 +108,7 @@ git push <origin> <rama>                        #   Con este comando actualizamo
                                                 #   proyecto local es decir (Local -> web)
 
 git fetch                                       #   Funciona para descargar actualizaciones al proyecto local en una rama diferente a la rama principal
-                                                #   esta rama se ecnuentra oculta, se necesita usar el comando git branch -r 
+                                                #   esta rama se encuentra oculta, se necesita usar el comando git branch -r 
 
 git push <origin> HEAD: <Rama>                  #   Para subir una rama alterna a la rama principal en github, usamos este comando donde nos crea una rama dentro
                                                 #   del repositorio remoto
@@ -123,12 +123,14 @@ git push <origin> HEAD: <Rama>                  #   Para subir una rama alterna 
 
     Primero se reliza un release y despues haremos un pull request
 
+    El pull Request a lo que veo se realiza con las ramificaciones que se encuentran dentro de Github
+    Por lo que este commit que haremos se subira a Commit "SocalMedia"
+
 #######################################################################################################################
 #                   Usando el release
 #######################################################################################################################
 
-    Unicamente es subir los archivos a una parte de release y listo, creamos una version release de nuestro proyecto
-    (creo que asi se hace, al rato experimentaremos)
+    Para hacer un release tenemos que hacer una Tag, no debe llevar espacios y debe ser un nombre valido, yo puse "V1.0"
 
 ########################################################################################################################
 #                               Dudas
