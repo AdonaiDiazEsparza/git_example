@@ -1,6 +1,0 @@
-//                  Escrito
-//
-//      Este escrito estara en las dos ramificaciones
-//      veremos si se cambian o que hacen
-
-// Esto esta en R3

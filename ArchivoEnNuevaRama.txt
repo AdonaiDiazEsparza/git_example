@@ -1,6 +1,0 @@
-//  Este Archivo esta creado dentro de la rama "NuevaRama"
-//  Aqui experimentaremos como unir archivos
-//  ver si cambian los archivos con modificaciones y observar el comportamiento
-
-// Esto lo agregamos en Rama 3
-// Funcion: Ver si cambiaban las cosas
