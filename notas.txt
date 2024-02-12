@@ -61,6 +61,7 @@ git checkout fetch_HEAD                     #   Funciona para cambiar a la rama 
 
 git switch -c <RamaCreadaPorUnFetch>        #   Despues de entrar a una rama oculta creada por git fetch, este comando funciona para crear una rama 
                                             #   visible y con la cual puedas trabajar
+
 #######################################################################################################
 ####                NOTA: si te sale la palabra (END) en el comando pulsa la tecla q
 #######################################################################################################
@@ -113,18 +114,35 @@ git push <origin> HEAD: <Rama>                  #   Para subir una rama alterna 
                                                 #   del repositorio remoto
 
 #######################################################################################################################
+#                   Pull Request
+#######################################################################################################################
+
+    Veamos que es un Pull Request:
+    Es crear un cambio en el proyecto, entonces en git hub se pide un pull request en el cual nosotros en un rato lo haremos
+    agregando un archivo nuevo en el cual demostremos que se hizo un Pull Request
+
+    Primero se reliza un release y despues haremos un pull request
+
+#######################################################################################################################
 #                   Usando el release
 #######################################################################################################################
 
-
+    Unicamente es subir los archivos a una parte de release y listo, creamos una version release de nuestro proyecto
+    (creo que asi se hace, al rato experimentaremos)
 
 ########################################################################################################################
 #                               Dudas
 ########################################################################################################################
 
 *¿Se puede borrar commits anteriores sin eliminar el commit más actual?
+
+######################### Dudas resueltas ##############################################################################
 *¿Si se desea unir una ramificacion alterna a la ramificacion principal? 
     Por ejemplo, si tu en la rama principal modificaste archivos que no modificaste en otra ramificacion alterna y realizas el commit,
     y en la ramificacion alterna, modificaste otros archivos que no cambiaste en nada en la rama principal, al momento de que yo desee
     unir la ramificacion alterna a la ramificacion principal,¿los archivos que modificaste en el principal, pero no en el alterno, regresan a la version original
     debido a la union?
+
+    Respuesta: No pasa nada, no se modifican, lo resolvi con una ramificación que realicé, los archivos que dejaste intactos en una Ramificacion alterna y modificaste en 
+               la rama principal no sufren cambios cuando las unes, donde si entra en conflicto es cuando modificas los mismos archivos en las dos ramas, una vez los intentas unir, 
+               debes decidir como arreglar y dejar el archivo.
