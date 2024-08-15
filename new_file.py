@@ -1,8 +1,5 @@
 def suma(a,b):
-    num1 = a
-    num2 = b
-
-    res = num1 + num2
+    res = a + b
     return res
 
 
